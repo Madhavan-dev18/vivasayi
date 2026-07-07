@@ -10,7 +10,7 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "cross-env NODE_OPTIONS=--max-old-space-size=4096 vitest run"
   },
   "dependencies": {
     "@genkit-ai/googleai": "^1.28.0",
@@ -71,6 +71,7 @@
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "@vitejs/plugin-react": "^6.0.2",
+    "cross-env": "^10.1.0",
     "eslint": "^9.20.0",
     "eslint-config-next": "^15.5.7",
     "genkit-cli": "^1.0.0",
